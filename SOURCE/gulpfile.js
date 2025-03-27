@@ -10,6 +10,8 @@ import gulpSourcemaps from 'gulp-sourcemaps';
 import gulpTerser from'gulp-terser';
 import gulpWrapper from 'gulp-wrapper';
 import gulpCleanCss from 'gulp-clean-css';
+import gulpCache from 'gulp-cached';
+import gulpIf from 'gulp-if';
 
 const { src, dest, series, watch, parallel } = gulp;
 const sass = gulpSass(dartSass);
@@ -64,14 +66,20 @@ const
 /* ======================================================================== */
 /* VENDOR RESOURCES */
 /* ======================================================================== */
+// Add this function to check if file has changed
+function hasFileChanged(file) {
+  return !gulpCache.caches['styles'] || !gulpCache.caches['styles'][file.path];
+}
+
 function vendorCSS() {
   return src(path.vendor.styles)
     .pipe(plumber())
-    .pipe(sass({
+    .pipe(gulpCache('styles'))
+    .pipe(gulpIf(hasFileChanged, sass({
       allowEmpty: true
-    }).on('error', sass.logError))
-    .pipe(gulpConcat('vendor.css'))
-    .pipe(gulpCleanCss())
+    }).on('error', sass.logError)))
+    .pipe(gulpIf(hasFileChanged, gulpConcat('vendor.css')))
+    .pipe(gulpIf(hasFileChanged, gulpCleanCss()))
     .pipe(dest(compilation.dist + '/css'))
     .pipe(bsServer.reload({
       stream: true
@@ -94,31 +102,38 @@ function vendorJS() {
 function componentsCSS() {
   return src(path.components.styles)
     .pipe(plumber())
-    .pipe(compilation.minify ? gulpNoop() : gulpSourcemaps.init())
-    .pipe(gulpConcat('main.sass'))
-    .pipe(sass({
+    .pipe(gulpCache('styles'))
+    .pipe(gulpIf(hasFileChanged, compilation.minify ? gulpNoop() : gulpSourcemaps.init()))
+    .pipe(gulpIf(hasFileChanged, gulpConcat('main.sass')))
+    .pipe(gulpIf(hasFileChanged, sass({
       allowEmpty: true,
       outputStyle: compilation.minify ? 'compressed' : 'expanded'
-    }).on('error', sass.logError))
-    .pipe(autoPrefixer())
-    .pipe(compilation.minify ? gulpNoop() : gulpSourcemaps.write('/'))
+    }).on('error', sass.logError)))
+    .pipe(gulpIf(hasFileChanged, autoPrefixer()))
+    .pipe(gulpIf(hasFileChanged, compilation.minify ? gulpNoop() : gulpSourcemaps.write('/')))
     .pipe(dest(compilation.dist + '/css'))
     .pipe(bsServer.reload({
       stream: true
     }));
 }
 
+// Add this near your other functions
+function hasScriptChanged(file) {
+  return !gulpCache.caches['scripts'] || !gulpCache.caches['scripts'][file.path];
+}
+
 function componentsJS() {
   return src(path.components.scripts)
     .pipe(plumber())
-    .pipe(compilation.minify ? gulpNoop() : gulpSourcemaps.init())
-    .pipe(gulpConcat('components.js'))
-    .pipe(gulpWrapper({
+    .pipe(gulpCache('scripts'))
+    .pipe(gulpIf(hasScriptChanged, compilation.minify ? gulpNoop() : gulpSourcemaps.init()))
+    .pipe(gulpIf(hasScriptChanged, gulpConcat('components.js')))
+    .pipe(gulpIf(hasScriptChanged, gulpWrapper({
       header: '(function ($) {\n\n\'use strict\';\n\n',
       footer: '\n\n})(jQuery);\n'
-    }))
-    .pipe(compilation.minify ? gulpNoop() : gulpSourcemaps.write('/'))
-    .pipe(compilation.minify ? gulpTerser() : gulpNoop())
+    })))
+    .pipe(gulpIf(hasScriptChanged, compilation.minify ? gulpNoop() : gulpSourcemaps.write('/')))
+    .pipe(gulpIf(hasScriptChanged, compilation.minify ? gulpTerser() : gulpNoop()))
     .pipe(dest(compilation.dist + '/js'))
     .pipe(bsServer.reload({
       stream: true
