@@ -189,6 +189,7 @@
           <!-- fullscreen menu -->
           <div class="header__wrapper-menu">
             <ul class="menu-overlay js-menu-overlay">
+              <!-- Menu items commented out but preserved in code
               <li class="menu-item-has-children"><a class="h2" href="#" data-pjax-link="overlayMenu">
                   <div class="menu-overlay__item-wrapper split-text js-split-text" data-split-text-type="lines">Portfolio</div></a>
                 <ul class="sub-menu">
@@ -439,33 +440,33 @@
               </li>
             </ul>
           </div>
-          <!-- - fullscreen menu -->
+           - fullscreen menu -->
           <!-- fullscreen widgets -->
           <div class="header__wrapper-overlay-widgets">
             <div class="row">
               <!-- widget TEXT -->
-              <div class="col-lg-4 header__widget">
-                <div class="header__widget-title small-caps js-split-text split-text" data-split-text-type="lines">Contacts</div>
+              <div class="col-auto header__widget">
+                <div class="header__widget-title small-caps js-split-text split-text" data-split-text-type="lines">Contact</div>
                 <div class="header__widget-content js-split-text split-text" data-split-text-type="lines">
-                  <p><a href="hey@ruyriver.com">hey@ruyriver.com</a><br/>+57 305-445-3335<br/>
+                  <p><a href="https://mail.google.com/mail/?view=cm&fs=1&to=hey@ruyriver.com&su=I%20saw%20your%20page" onclick="event.preventDefault(); openGmail('hey@ruyriver.com');">hey@ruyriver.com</a><br/>+57 305-445-3335<br/>
                   </p>
                 </div>
               </div>
               <!-- - widget TEXT -->
               <!-- widget TEXT -->
-              <div class="col-lg-4 header__widget">
+              <!--<div class="col-lg-4 header__widget">
                 <div class="header__widget-title small-caps js-split-text split-text" data-split-text-type="lines">Office</div>
                 <div class="header__widget-content js-split-text split-text" data-split-text-type="lines">
                   <p>4903 Mayo Street<br/>Cincinnati, KY 45202<br/>USA<br/>
                   </p>
                 </div>
               </div>
-              <!-- - widget TEXT -->
+               - widget TEXT -->
               <!-- widget TEXT -->
-              <div class="col-lg-4 header__widget">
-                <div class="header__widget-title small-caps js-split-text split-text" data-split-text-type="lines">Want to Work with Me?</div>
+              <div class="col-ml-lg-auto header__widget">
+                <div class="header__widget-title small-caps js-split-text split-text" data-split-text-type="lines">Want to chat?</div>
                 <div class="header__widget-content js-split-text split-text" data-split-text-type="lines">
-                  <p><a href="page-inner-contacts-1.html">Get in Touch</a><br/>
+                  <p><a href="https://t.me/ruyriver">Let's chat</a><br/>
                   </p>
                 </div>
               </div>
@@ -508,7 +509,7 @@
                               </div>
                               <!-- - Project photos --></a></div>
                           <div class="swiper-slide" data-category="Projects"><a class="d-inline-block js-page-indicator-trigger js-Project" href="#">
-                              <h2 class="h1 slider__heading block-counter js-split-text" data-split-text-type="lines, words, chars" data-split-text-set="chars"><span>CLPD: Peso Digital</span><span class="block-counter__counter">H</span></h2>
+                              <h2 class="h1 slider__heading block-counter js-split-text" data-split-text-type="lines, words, chars" data-split-text-set="chars"><span>CLPD</span><span class="block-counter__counter">Based LATAM</span></h2>
                               <!-- Project photos -->
                               <div class="js-Project__items d-none"><img src="#" data-Project-src="img/assets/ProjectImages/Project-3_1.jpg" width="1920" height="1280" data-title="" alt=""/><img src="#" data-Project-src="img/assets/ProjectImages/Project-3_2.jpg" width="1920" height="1920" data-title="" alt=""/><img src="#" data-Project-src="img/assets/ProjectImages/Project-3_3.jpg" width="1280" height="1920" data-title="" alt=""/><img src="#" data-Project-src="img/assets/ProjectImages/Project-3_4.jpg" width="1280" height="1920" data-title="" alt=""/><img src="#" data-Project-src="img/assets/ProjectImages/Project-3_5.jpg" width="1920" height="1280" data-title="" alt=""/><img src="#" data-Project-src="img/assets/ProjectImages/Project-3_6.jpg" width="1280" height="1920" data-title="" alt=""/><img src="#" data-Project-src="img/assets/ProjectImages/Project-3_7.jpg" width="1920" height="1280" data-title="" alt=""/>
                               </div>
@@ -846,5 +847,27 @@
     <script src="js/components.js"></script>
     <!-- - COMPONENTS -->
     <script src="https://maps.googleapis.com/maps/api/js?callback=Function.prototype&amp;key=AIzaSyBwR_TrF6h7-pMxkKv_q2t8BXX3w6QuFOc" async></script>
+    
+    <!-- openGmail in mobile -->
+    <script>
+      function openGmail(email) {
+        // Set email subject
+        var subject = "I saw your page";
+        
+        // Check if device is mobile
+        if (/Android|iPhone|iPad|iPod|Opera Mini|Mobile|mobile|CriOS|Safari.*Mobile|BlackBerry|IEMobile|Chrome.*Mobile/i.test(navigator.userAgent)) {
+          // For mobile devices, try to open Gmail app with subject
+          window.location.href = 'mailto:' + email + '?subject=' + encodeURIComponent(subject);
+          
+          // Fallback to Gmail web after a short delay (in case app doesn't open)
+          setTimeout(function() {
+            window.location.href = 'https://mail.google.com/mail/?view=cm&fs=1&to=' + email + '&su=' + encodeURIComponent(subject);
+          }, 500);
+        } else {
+          // For desktop, open Gmail in browser with subject
+          window.open('https://mail.google.com/mail/?view=cm&fs=1&to=' + email + '&su=' + encodeURIComponent(subject), '_blank');
+        }
+      }
+    </script>
   </body>
 </html>
