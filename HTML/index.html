@@ -448,7 +448,7 @@
               <div class="col-auto header__widget">
                 <div class="header__widget-title small-caps js-split-text split-text" data-split-text-type="lines">Contact</div>
                 <div class="header__widget-content js-split-text split-text" data-split-text-type="lines">
-                  <p><a href="https://mail.google.com/mail/?view=cm&fs=1&to=hey@ruyriver.com&su=I%20saw%20your%20page" onclick="event.preventDefault(); openGmail('hey@ruyriver.com');">hey@ruyriver.com</a><br/>+57 305-445-3335<br/>
+                  <p><a href="mailto:hey@ruyriver.com" onclick="openGmail('hey@ruyriver.com'); return false;">hey@ruyriver.com</a><br/>+57 305-445-3335<br/>
                   </p>
                 </div>
               </div>
@@ -848,26 +848,23 @@
     <!-- - COMPONENTS -->
     <script src="https://maps.googleapis.com/maps/api/js?callback=Function.prototype&amp;key=AIzaSyBwR_TrF6h7-pMxkKv_q2t8BXX3w6QuFOc" async></script>
     
-    <!-- openGmail in mobile -->
-    <script>
-      function openGmail(email) {
-        // Set email subject
-        var subject = "I saw your page";
-        
-        // Check if device is mobile
-        if (/Android|iPhone|iPad|iPod|Opera Mini|Mobile|mobile|CriOS|Safari.*Mobile|BlackBerry|IEMobile|Chrome.*Mobile/i.test(navigator.userAgent)) {
-          // For mobile devices, try to open Gmail app with subject
-          window.location.href = 'mailto:' + email + '?subject=' + encodeURIComponent(subject);
-          
-          // Fallback to Gmail web after a short delay (in case app doesn't open)
-          setTimeout(function() {
-            window.location.href = 'https://mail.google.com/mail/?view=cm&fs=1&to=' + email + '&su=' + encodeURIComponent(subject);
-          }, 500);
-        } else {
-          // For desktop, open Gmail in browser with subject
-          window.open('https://mail.google.com/mail/?view=cm&fs=1&to=' + email + '&su=' + encodeURIComponent(subject), '_blank');
-        }
+  <!-- openGmail in mobile -->
+  <script>
+    function openGmail(email) {
+      // Set email subject
+      var subject = "I saw your page";
+      
+      // Check if device is mobile
+      var isMobile = /Android|iPhone|iPad|iPod|Opera Mini|Mobile|mobile|CriOS|Safari.*Mobile|BlackBerry|IEMobile|Chrome.*Mobile/i.test(navigator.userAgent);
+      
+      if (isMobile) {
+        // For mobile devices, try to open native mail app
+        window.location.href = 'mailto:' + email + '?subject=' + encodeURIComponent(subject);
+      } else {
+        // For desktop, open Gmail in browser
+        window.open('https://mail.google.com/mail/?view=cm&fs=1&to=' + email + '&su=' + encodeURIComponent(subject), '_blank');
       }
+    }
     </script>
   </body>
 </html>
