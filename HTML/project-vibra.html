@@ -538,7 +538,19 @@
             <div class="section-image section-masthead__background section-masthead__background_fullscreen">
               <div class="section-image__wrapper js-transition-img" data-arts-parallax="data-arts-parallax" data-arts-parallax-factor="0.15">
                 <div class="js-transition-img__transformed-el">
-                  <div class="lazy-bg" data-src="img/assets/projects/project-7.jpg"></div>
+                  <div class="js-transition-img__transformed-el">
+                    <!-- Video for modern browsers -->
+                    <video class="of-cover" autoplay loop muted playsinline>
+                      <source src="img/assets/ProjectImages/Vibra/vibra-hero-anim.webm" type="video/webm">
+                      <source src="img/assets/ProjectImages/Vibra/vibra-hero-anim.mp4" type="video/mp4">
+                      <!-- Simple image fallback for browsers that understand <video> but can't play the formats -->
+                      <img src="img/assets/ProjectImages/Vibra/vibra-hero-anim-sm.gif" alt="Vibra animation" class="of-cover">
+                    </video>
+                    <!-- Fallback for very old browsers that don't understand <video> at all -->
+                    <noscript>
+                      <div class="lazy-bg" data-src="img/assets/ProjectImages/Vibra/vibra-hero-anim-sm.gif"></div>
+                    </noscript>
+                  </div>
                 </div>
               </div>
               <!-- overlay-->
@@ -568,7 +580,7 @@
           <section class="section section-image section_h-800">
             <div class="section-image__wrapper" data-arts-parallax="data-arts-parallax" data-arts-parallax-factor="0.15">
               <div>
-                <div class="lazy-bg" data-src="img/assets/project7/img-7-1.jpg"></div>
+                <div class="lazy-bg" data-src="img/assets/ProjectImages/Vibra/vibra-cover.webp"></div>
               </div>
             </div>
           </section>
@@ -596,7 +608,7 @@
                 <section class="section section-image section_h-800">
                   <div class="section-image__wrapper" data-arts-parallax="data-arts-parallax" data-arts-parallax-factor="0.15">
                     <div>
-                      <div class="lazy-bg" data-src="img/assets/project7/img-7-2.jpg"></div>
+                      <div class="lazy-bg" data-src="img/assets/ProjectImages/Vibra/vibra-gallery-ui-feed.webp"></div>
                     </div>
                   </div>
                 </section>
@@ -627,7 +639,7 @@
                 <section class="section section-image section_h-800">
                   <div class="section-image__wrapper" data-arts-parallax="data-arts-parallax" data-arts-parallax-factor="0.15">
                     <div>
-                      <div class="lazy-bg" data-src="img/assets/project7/img-7-3.jpg"></div>
+                      <div class="lazy-bg" data-src="img/assets/ProjectImages/Vibra/vibra-gallery-walletviews.webp"></div>
                     </div>
                   </div>
                 </section>
@@ -822,7 +834,7 @@
             </div>
             <div class="container section-nav-projects__next-image section-fullheight__inner">
               <div class="section-nav-projects__wrapper-image js-transition-img overflow">
-                <div class="lazy js-transition-img__transformed-el"><img class="of-cover" src="#" data-src="img/assets/projects/project-8.jpg" alt="" width="1920" height="1280"/></div>
+                <div class="lazy js-transition-img__transformed-el"><img class="of-cover" src="HTML/project-vibra.html" data-src="img/assets/Projects/Project-Zurf_thumb.WebM" alt="" width="1920" height="1280"/></div>
               </div>
             </div>
             <div class="section-fullheight__inner hidden"></div>

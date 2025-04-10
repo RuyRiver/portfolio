@@ -3,7 +3,8 @@ import autoPrefixer from 'gulp-autoprefixer';
 import gulpConcat from 'gulp-concat';
 import gulpNoop from 'gulp-noop';
 import plumber from 'gulp-plumber';
-import dartSass from 'sass';
+// Fix the deprecated sass import
+import * as dartSass from 'sass';
 import gulpSass from 'gulp-sass';
 import browserSync from 'browser-sync';
 import gulpSourcemaps from 'gulp-sourcemaps';
@@ -168,6 +169,12 @@ function watcher() {
   watch(path.watch, browserSyncReload);
 }
 
+// Export the individual tasks so they can be run from the command line
+export { vendorCSS, vendorJS, componentsCSS, componentsJS, browserSyncCreate, watcher };
+// Export the parallel task
+export const parallelTasks = parallel(vendorCSS, vendorJS, componentsCSS, componentsJS);
+
+// Default task remains the same
 export default series(
   parallel(vendorCSS, vendorJS, componentsCSS, componentsJS),
   browserSyncCreate,
