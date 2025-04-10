@@ -169,11 +169,21 @@ function watcher() {
   watch(path.watch, browserSyncReload);
 }
 
+function clearCache(done) {
+  // Clear all caches
+  if (gulpCache.caches) {
+    gulpCache.caches = {};
+  }
+  console.log('✅ Gulp cache cleared');
+  done();
+}
+
 // Export the individual tasks so they can be run from the command line
 export { vendorCSS, vendorJS, componentsCSS, componentsJS, browserSyncCreate, watcher };
 // Export the parallel task
 export const parallelTasks = parallel(vendorCSS, vendorJS, componentsCSS, componentsJS);
-
+// Export the clearCache task
+export const clean = clearCache;
 // Default task remains the same
 export default series(
   parallel(vendorCSS, vendorJS, componentsCSS, componentsJS),

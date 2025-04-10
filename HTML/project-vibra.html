@@ -599,7 +599,7 @@
                     </div>
                     <div class="w-100"></div>
                     <div class="section-content__text split-text js-split-text" data-split-text-type="lines" data-split-text-set="lines">
-                      <p>Farcaster’s community—composed of blockchain builders, founders, artists, and enthusiasts—expressed a unanimous sentiment: “Social-Fi is boring.” With a primary audience of rebellious millennial nerds in the USA, we tapped into cultural nostalgia from a beloved classic music TV channel. This inspiration birthed a disruptive brand identity: bold, wild, and a true celebration of creativity.</p>
+                      <p>Farcaster's community—composed of blockchain builders, founders, artists, and enthusiasts—expressed a unanimous sentiment: "Social-Fi is boring." With a primary audience of rebellious millennial nerds in the USA, we tapped into cultural nostalgia from a beloved classic music TV channel. This inspiration birthed a disruptive brand identity: bold, wild, and a true celebration of creativity.</p>
                     </div>
                   </div>
                 </section>
@@ -720,7 +720,7 @@
                   <div class="section-content__inner">
                     <div class="w-100"></div>
                     <div class="section-content__text split-text js-split-text" data-split-text-type="lines" data-split-text-set="lines">
-                      <p>Inspired by TikTok’s engaging scroll to keep users entertained.</p>
+                      <p>Inspired by TikTok's engaging scroll to keep users entertained.</p>
                     </div>
                   </div>
                 </section>
@@ -842,11 +842,12 @@
               </div>
             </div>
             <div class="container section-nav-projects__next-image section-fullheight__inner">
-              <div class="section-nav-projects__wrapper-image js-transition-img overflow" style="border-radius: 100%; overflow: hidden;">
-                <div class="lazy js-transition-img__transformed-el" style="border-radius: 100%; overflow: hidden;"><img class="of-cover" src="*" data-src="*" alt="" width="640" height="640"/></div>
+              <div class="section-nav-projects__wrapper-image js-transition-img overflow" style="border-radius: 50%; overflow: hidden;">
+                <div class="lazy js-transition-img__transformed-el" style="border-radius: 50%; overflow: hidden;"><img class="of-cover" src="" data-src="" alt="Next Project Preview" width="640" height="640"/></div>
               </div>
             </div>
             <div class="section-fullheight__inner hidden"></div>
+          </section>
           <!-- - section NAV PROJECTS -->
         </main>
         <!-- PAGE FOOTER -->
@@ -1051,4 +1052,140 @@
   }
     </script>
   </body>
+  <!-- Add auto next project script before closing body tag -->
+  <script>
+    // Function to update next project navigation
+    function initNextProjectNavigation() {
+      // Current project filename
+      const currentPath = window.location.pathname;
+      const currentFilename = currentPath.split('/').pop();
+      
+      // Only proceed if we're on a project page
+      if (currentFilename.startsWith('project-')) {
+        // Function to scan for project files in the directory
+        function getProjectFiles() {
+          // List of known project files - as a fallback
+          const knownProjects = [
+            'project-vibra.html',
+            'project-zurf.html'
+            // Add more project files as they're created
+          ];
+          
+          // Try to fetch directory listing
+          return fetch('../HTML/')
+            .then(response => response.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const doc = parser.parseFromString(html, 'text/html');
+              
+              // Extract project HTML files from directory listing
+              const projectFiles = [];
+              const links = doc.querySelectorAll('a');
+              
+              for (let link of links) {
+                const href = link.getAttribute('href');
+                if (href && href.startsWith('project-') && href.endsWith('.html')) {
+                  projectFiles.push(href);
+                }
+              }
+              
+              return projectFiles.length > 0 ? projectFiles : knownProjects;
+            })
+            .catch(() => {
+              console.log('Could not dynamically detect project files, using predefined list');
+              return knownProjects;
+            });
+        }
+        
+        // Function to determine the next project
+        function findNextProject(projectFiles, currentFile) {
+          const currentIndex = projectFiles.indexOf(currentFile);
+          if (currentIndex !== -1 && currentIndex < projectFiles.length - 1) {
+            return projectFiles[currentIndex + 1];
+          } else if (projectFiles.length > 0) {
+            // If current is last or not found, loop back to first
+            return projectFiles[0];
+          }
+          return null;
+        }
+        
+        // Function to update navigation elements
+        function updateNextProjectNav(nextProjectFile) {
+          if (!nextProjectFile) return;
+          
+          // Update the link href
+          const navLink = document.querySelector('.section-nav-projects__link');
+          if (navLink) {
+            navLink.setAttribute('href', nextProjectFile);
+            
+            // Extract project name for the heading
+            let projectName = nextProjectFile.replace('project-', '').replace('.html', '');
+            // Capitalize and format project name (e.g., "zurf" -> "Zurf")
+            projectName = projectName.charAt(0).toUpperCase() + projectName.slice(1);
+            
+            // Update the heading text
+            const heading = navLink.querySelector('.section-nav-projects__heading');
+            if (heading) {
+              heading.textContent = projectName;
+            }
+            
+            // Find and update the image source
+            const imgElement = document.querySelector('.section-nav-projects__wrapper-image img');
+            if (imgElement) {
+              // Path pattern based on existing project structure
+              const imageUrl = `img/assets/ProjectImages/${projectName}/${projectName.toLowerCase()}-cover.webp`;
+              
+              // Set the image sources
+              imgElement.setAttribute('src', ''); // Clear source to ensure the data-src is used
+              imgElement.setAttribute('data-src', imageUrl);
+              imgElement.setAttribute('alt', `${projectName} Project Preview`);
+              
+              // Trigger lazy loading if available (most templates use this)
+              if (window.lazySizes) {
+                imgElement.classList.add('lazyload');
+                setTimeout(() => {
+                  if (lazySizes && lazySizes.loader) {
+                    lazySizes.loader.checkElems();
+                  }
+                }, 100);
+              }
+              
+              // Fallback for other lazy loading implementations
+              if (typeof window.lazyLoadInstance !== 'undefined') {
+                setTimeout(() => window.lazyLoadInstance.update(), 100);
+              }
+            }
+          }
+        }
+        
+        // Get the project files and update navigation
+        getProjectFiles().then(projectFiles => {
+          const nextProject = findNextProject(projectFiles, currentFilename);
+          if (nextProject) {
+            console.log('Next project:', nextProject);
+            updateNextProjectNav(nextProject);
+          }
+        });
+      }
+    }
+
+    // Initialize on DOM ready
+    document.addEventListener('DOMContentLoaded', initNextProjectNavigation);
+
+    // Re-initialize when Barba.js transitions occur (if Barba.js is used)
+    if (typeof Barba !== 'undefined') {
+      document.addEventListener('barba:after-leave', initNextProjectNavigation);
+      document.addEventListener('barba:after-enter', initNextProjectNavigation);
+    }
+
+    // Handle PJAX transitions (another common method)
+    document.addEventListener('pjax:complete', initNextProjectNavigation);
+    
+    // For other custom transitions, we can look for specific events
+    // This handles the case where a custom event is dispatched after page transition
+    document.addEventListener('transitionComplete', initNextProjectNavigation);
+    
+    // Also reinitialize when window loads (catches all cases)
+    window.addEventListener('load', initNextProjectNavigation);
+  </script>
 </html>

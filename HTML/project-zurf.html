@@ -3,11 +3,11 @@
   <head>
     <meta charset="utf-8"/>
     <meta http-equiv="x-ua-compatible" content="ie=edge"/>
-    <title>Ruy River – Vibra</title>
+    <title>Ruy River – Zurf</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
     <meta content="telephone=no" name="format-detection"/>
     <meta name="HandheldFriendly" content="true"/>
-    <meta name="description" content="Ruy River – Vibra - UI/UX Design Project"/>
+    <meta name="description" content="Ruy River – Zurf - UI/UX Design Project"/>
     <!-- Google Fonts -->
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Inter:400,500,500i,600,700&amp;display=swap"/>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
@@ -43,7 +43,7 @@
           <!-- header -->
           <div class="preloader__header mt-auto">
             <div class="preloader__heading h2">Ruy River</div>
-            <div class="preloader__subline small-caps mt-1">Vibra</div>
+            <div class="preloader__subline small-caps mt-1">Zurf Social</div>
           </div>
           <!-- - header -->
           <!-- counter -->
@@ -489,7 +489,7 @@
                   <div class="section-masthead__subheading small-caps mt-0 mb-1 mb-md-2 split-text js-split-text" data-split-text-type="lines,words" data-split-text-set="words"><span>Farcaster</span></div>
                   <div class="w-100"></div>
                   <div class="section-masthead__heading split-text js-split-text" data-split-text-type="lines,words" data-split-text-set="words">
-                    <h1 class="h1 mt-0 mb-0">Vibra</h1>
+                    <h1 class="h1 mt-0 mb-0">Zurf Social</h1>
                   </div>
                   <div class="w-100"></div>
                   <div class="section__headline mt-2 mr-auto"></div>
@@ -599,7 +599,7 @@
                     </div>
                     <div class="w-100"></div>
                     <div class="section-content__text split-text js-split-text" data-split-text-type="lines" data-split-text-set="lines">
-                      <p>Farcaster’s community—composed of blockchain builders, founders, artists, and enthusiasts—expressed a unanimous sentiment: “Social-Fi is boring.” With a primary audience of rebellious millennial nerds in the USA, we tapped into cultural nostalgia from a beloved classic music TV channel. This inspiration birthed a disruptive brand identity: bold, wild, and a true celebration of creativity.</p>
+                      <p>Farcaster's community—composed of blockchain builders, founders, artists, and enthusiasts—expressed a unanimous sentiment: "Social-Fi is boring." With a primary audience of rebellious millennial nerds in the USA, we tapped into cultural nostalgia from a beloved classic music TV channel. This inspiration birthed a disruptive brand identity: bold, wild, and a true celebration of creativity.</p>
                     </div>
                   </div>
                 </section>
@@ -720,7 +720,7 @@
                   <div class="section-content__inner">
                     <div class="w-100"></div>
                     <div class="section-content__text split-text js-split-text" data-split-text-type="lines" data-split-text-set="lines">
-                      <p>Inspired by TikTok’s engaging scroll to keep users entertained.</p>
+                      <p>Inspired by TikTok's engaging scroll to keep users entertained.</p>
                     </div>
                   </div>
                 </section>
@@ -842,8 +842,8 @@
               </div>
             </div>
             <div class="container section-nav-projects__next-image section-fullheight__inner">
-              <div class="section-nav-projects__wrapper-image js-transition-img overflow">
-                <div class="lazy js-transition-img__transformed-el"><img class="of-cover" src="HTML/project-vibra.html" data-src="img/assets/Projects/Project-Zurf_thumb.WebM" alt="" width="1920" height="1280"/></div>
+              <div class="section-nav-projects__wrapper-image js-transition-img overflow" style="border-radius: 100%; overflow: hidden;">
+                <div class="lazy js-transition-img__transformed-el" style="border-radius: 100%; overflow: hidden;"><img class="of-cover" src="" data-src="" alt="Next Project Preview" width="640" height="640"/></div>
               </div>
             </div>
             <div class="section-fullheight__inner hidden"></div>
@@ -1033,23 +1033,130 @@
     <script src="js/components.js"></script>
     <!-- - COMPONENTS -->
     <script src="https://maps.googleapis.com/maps/api/js?callback=Function.prototype&amp;key=AIzaSyBwR_TrF6h7-pMxkKv_q2t8BXX3w6QuFOc" async></script>
-  <!-- openGmail in mobile -->
-  <script>
-  function openGmail(email) {
-    // Set email subject
-    var subject = "I saw your page";
-    
-    // Check if device is mobile
-    var isMobile = /Android|iPhone|iPad|iPod|Opera Mini|Mobile|mobile|CriOS|Safari.*Mobile|BlackBerry|IEMobile|Chrome.*Mobile/i.test(navigator.userAgent);
-    
-    if (isMobile) {
-      // For mobile devices, try to open native mail app
-      window.location.href = 'mailto:' + email + '?subject=' + encodeURIComponent(subject);
-    } else {
-      // For desktop, open Gmail in browser
-      window.open('https://mail.google.com/mail/?view=cm&fs=1&to=' + email + '&su=' + encodeURIComponent(subject), '_blank');
+
+    <!-- openGmail in mobile -->
+    <script>
+    function openGmail(email) {
+      // Set email subject
+      var subject = "I saw your page";
+      
+      // Check if device is mobile
+      var isMobile = /Android|iPhone|iPad|iPod|Opera Mini|Mobile|mobile|CriOS|Safari.*Mobile|BlackBerry|IEMobile|Chrome.*Mobile/i.test(navigator.userAgent);
+      
+      if (isMobile) {
+        // For mobile devices, try to open native mail app
+        window.location.href = 'mailto:' + email + '?subject=' + encodeURIComponent(subject);
+      } else {
+        // For desktop, open Gmail in browser
+        window.open('https://mail.google.com/mail/?view=cm&fs=1&to=' + email + '&su=' + encodeURIComponent(subject), '_blank');
+      }
     }
-  }
+    </script>
+
+    <!-- Auto Next Project Navigation -->
+    <script>
+      // Function to update next project navigation
+      function initNextProjectNavigation() {
+        // Current project filename
+        const currentPath = window.location.pathname;
+        const currentFilename = currentPath.split('/').pop();
+        
+        // Only proceed if we're on a project page
+        if (currentFilename.startsWith('project-')) {
+          // List of known project files - as a fallback
+          const knownProjects = [
+            'project-vibra.html',
+            'project-zurf.html'
+            // Add more project files as they're created
+          ];
+          
+          // Function to determine the next project
+          function findNextProject(projectFiles, currentFile) {
+            const currentIndex = projectFiles.indexOf(currentFile);
+            if (currentIndex !== -1 && currentIndex < projectFiles.length - 1) {
+              return projectFiles[currentIndex + 1];
+            } else if (projectFiles.length > 0) {
+              // If current is last or not found, loop back to first
+              return projectFiles[0];
+            }
+            return null;
+          }
+          
+          // Function to update navigation elements
+          function updateNextProjectNav(nextProjectFile) {
+            if (!nextProjectFile) return;
+            
+            // Update the link href
+            const navLink = document.querySelector('.section-nav-projects__link');
+            if (navLink) {
+              navLink.setAttribute('href', nextProjectFile);
+              
+              // Extract project name for the heading
+              let projectName = nextProjectFile.replace('project-', '').replace('.html', '');
+              // Capitalize and format project name (e.g., "zurf" -> "Zurf")
+              projectName = projectName.charAt(0).toUpperCase() + projectName.slice(1);
+              
+              // Update the heading text
+              const heading = navLink.querySelector('.section-nav-projects__heading');
+              if (heading) {
+                heading.textContent = projectName;
+              }
+              
+              // Find and update the image source
+              const imgElement = document.querySelector('.section-nav-projects__wrapper-image img');
+              if (imgElement) {
+                // Path pattern based on existing project structure
+                const imageUrl = `img/assets/ProjectImages/${projectName}/${projectName.toLowerCase()}-cover.webp`;
+                
+                // Set the image sources
+                imgElement.setAttribute('src', ''); // Clear source to ensure the data-src is used
+                imgElement.setAttribute('data-src', imageUrl);
+                imgElement.setAttribute('alt', `${projectName} Project Preview`);
+                
+                // Trigger lazy loading if available
+                if (window.lazySizes) {
+                  imgElement.classList.add('lazyload');
+                  setTimeout(() => {
+                    if (lazySizes && lazySizes.loader) {
+                      lazySizes.loader.checkElems();
+                    }
+                  }, 100);
+                }
+                
+                // Fallback for other lazy loading implementations
+                if (typeof window.lazyLoadInstance !== 'undefined') {
+                  setTimeout(() => window.lazyLoadInstance.update(), 100);
+                }
+              }
+            }
+          }
+          
+          // Get the project files and update navigation
+          const nextProject = findNextProject(knownProjects, currentFilename);
+          if (nextProject) {
+            console.log('Next project:', nextProject);
+            updateNextProjectNav(nextProject);
+          }
+        }
+      }
+
+      // Initialize on DOM ready
+      document.addEventListener('DOMContentLoaded', initNextProjectNavigation);
+
+      // Re-initialize when Barba.js transitions occur (if Barba.js is used)
+      if (typeof Barba !== 'undefined') {
+        document.addEventListener('barba:after-leave', initNextProjectNavigation);
+        document.addEventListener('barba:after-enter', initNextProjectNavigation);
+      }
+
+      // Handle PJAX transitions (another common method)
+      document.addEventListener('pjax:complete', initNextProjectNavigation);
+      
+      // For other custom transitions, we can look for specific events
+      document.addEventListener('transitionComplete', initNextProjectNavigation);
+      
+      // Also reinitialize when window loads (catches all cases)
+      window.addEventListener('load', initNextProjectNavigation);
     </script>
   </body>
 </html>
