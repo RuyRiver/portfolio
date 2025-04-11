@@ -10,7 +10,7 @@ class AutoProjectNavigation {
       selectorLink: '.section-nav-projects__link',
       selectorHeading: '.section-nav-projects__heading',
       selectorImage: '.section-nav-projects__wrapper-image img',
-      imagePathPattern: 'img/assets/Projects/{projectname}-cover.webp',
+      imagePathPattern: 'img/assets/Projects/{projectname}-preview.webp',
       projectPrefix: 'project-',
       knownProjects: [
         'project-vibra.html',
