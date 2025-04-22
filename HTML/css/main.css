@@ -9,6 +9,7 @@
     --color-light-2: #f2f1ed;
     --color-light-3: #f7f6f3;
     --color-light-4: #f1e9db;
+    --color-red-1: #ad272e;
     --color-gray-1: #888888;
     --color-gray-2: #cccccc;
     --xl-max-font-size: 188;
@@ -358,6 +359,10 @@ a:hover {
 
 .bg-dark-4 {
     background-color: var(--color-dark-4) !important
+}
+
+.bg-red-1 {
+    background-color: var(--color-red-1) !important
 }
 
 .bg-light-1 {
