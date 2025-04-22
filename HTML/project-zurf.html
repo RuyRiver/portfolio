@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
     <meta content="telephone=no" name="format-detection"/>
     <meta name="HandheldFriendly" content="true"/>
-    <meta name="description" content="Ruy River – Zurf - UI/UX Design Project"/>
+    <meta name="description" content="Ruy River – Zurf - Product Design Project"/>
     <!-- Google Fonts -->
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Inter:400,500,500i,600,700&amp;display=swap"/>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
@@ -38,12 +38,12 @@
   <body>
     <div data-barba="wrapper">
       <!-- PAGE PRELOADER -->
-      <div class="preloader text-center bg-dark-2" id="js-preloader" data-arts-theme-text="light">
+      <div class="preloader text-center bg-dark-2" id="js-preloader" data-arts-theme-text="dark" style="background-color: #fff !important;">
         <div class="preloader__content">
           <!-- header -->
           <div class="preloader__header mt-auto">
             <div class="preloader__heading h2">Ruy River</div>
-            <div class="preloader__subline small-caps mt-1">Zurf Social</div>
+            <div class="preloader__subline small-caps mt-1">Zurf</div>
           </div>
           <!-- - header -->
           <!-- counter -->
@@ -149,7 +149,7 @@
       </div>
       <!-- - Cursor Follower-->
       <!-- PAGE HEADER -->
-      <header class="header header_menu-right header_fixed container-fluid js-header-sticky" id="page-header" data-arts-theme-text="light" data-arts-header-sticky-theme="bg-light-1" data-arts-header-logo="secondary" data-arts-header-sticky-logo="primary" data-arts-header-overlay-theme="light" data-arts-header-overlay-background="#f2f1ed">
+      <header class="header header_menu-right header_fixed container-fluid js-header-sticky" id="page-header" data-arts-theme-text="light" data-arts-header-sticky-theme="bg-white" data-arts-header-logo="secondary" data-arts-header-sticky-logo="primary" data-arts-header-overlay-theme="light" data-arts-header-overlay-background="#f2f1ed">
         <!-- top bar -->
         <div class="header__container header__controls">
           <div class="row justify-content-between align-items-center">
@@ -189,258 +189,9 @@
           <!-- fullscreen menu -->
           <div class="header__wrapper-menu">
             <ul class="menu-overlay js-menu-overlay">
-              <!-- Menu items commented out but preserved in code
-              <li class="menu-item-has-children"><a class="h2" href="#" data-pjax-link="overlayMenu">
-                  <div class="menu-overlay__item-wrapper split-text js-split-text" data-split-text-type="lines">Portfolio</div></a>
-                <ul class="sub-menu">
-                  <li class="menu-item-has-children"><a class="h3" href="#" data-pjax-link="overlayMenu">
-                      <div class="menu-overlay__item-wrapper split-text js-split-text" data-split-text-type="lines">Sliders</div></a>
-                    <ul class="sub-menu">
-                      <li class="menu-item-has-children"><a class="h3" href="#" data-pjax-link="overlayMenu">
-                          <div class="menu-overlay__item-wrapper split-text js-split-text" data-split-text-type="lines">Fullscreen</div></a>
-                        <ul class="sub-menu">
-                          <li><a class="h3" href="projects-slider-fullscreen-1.html" data-pjax-link="overlayMenu">
-                              <div class="menu-overlay__item-wrapper split-text js-split-text" data-split-text-type="lines">Slider 1 Distortion / H</div></a>
-                          </li>
-                          <li><a class="h3" href="projects-slider-fullscreen-2.html" data-pjax-link="overlayMenu">
-                              <div class="menu-overlay__item-wrapper split-text js-split-text" data-split-text-type="lines">Slider 2 Distortion / V</div></a>
-                          </li>
-                          <li><a class="h3" href="projects-slider-fullscreen-3.html" data-pjax-link="overlayMenu">
-                              <div class="menu-overlay__item-wrapper split-text js-split-text" data-split-text-type="lines">Slider 3 Parallax / H</div></a>
-                          </li>
-                          <li><a class="h3" href="projects-slider-fullscreen-4.html" data-pjax-link="overlayMenu">
-                              <div class="menu-overlay__item-wrapper split-text js-split-text" data-split-text-type="lines">Slider 4 Parallax / V</div></a>
-                          </li>
-                          <li><a class="h3" href="projects-slider-fullscreen-5.html" data-pjax-link="overlayMenu">
-                              <div class="menu-overlay__item-wrapper split-text js-split-text" data-split-text-type="lines">Slider 5 Reveal / H</div></a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li class="menu-item-has-children"><a class="h3" href="#" data-pjax-link="overlayMenu">
-                          <div class="menu-overlay__item-wrapper split-text js-split-text" data-split-text-type="lines">Halfscreen</div></a>
-                        <ul class="sub-menu">
-                          <li><a class="h3" href="projects-slider-halfscreen-6.html" data-pjax-link="overlayMenu">
-                              <div class="menu-overlay__item-wrapper split-text js-split-text" data-split-text-type="lines">Slider 6 Distortion / V</div></a>
-                          </li>
-                          <li><a class="h3" href="projects-slider-halfscreen-7.html" data-pjax-link="overlayMenu">
-                              <div class="menu-overlay__item-wrapper split-text js-split-text" data-split-text-type="lines">Slider 7 Parallax / H</div></a>
-                          </li>
-                          <li><a class="h3" href="projects-slider-halfscreen-8.html" data-pjax-link="overlayMenu">
-                              <div class="menu-overlay__item-wrapper split-text js-split-text" data-split-text-type="lines">Slider 8 Parallax / V</div></a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li class="menu-item-has-children"><a class="h3" href="#" data-pjax-link="overlayMenu">
-                          <div class="menu-overlay__item-wrapper split-text js-split-text" data-split-text-type="lines">Circle Covers</div></a>
-                        <ul class="sub-menu">
-                          <li><a class="h3" href="projects-slider-circle-covers-9.html" data-pjax-link="overlayMenu">
-                              <div class="menu-overlay__item-wrapper split-text js-split-text" data-split-text-type="lines">Slider 9 Circle Covers / V</div></a>
-                          </li>
-                          <li><a class="h3" href="projects-slider-circle-covers-10.html" data-pjax-link="overlayMenu">
-                              <div class="menu-overlay__item-wrapper split-text js-split-text" data-split-text-type="lines">Slider 10 Circle Covers / H</div></a>
-                          </li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="menu-item-has-children"><a class="h3" href="#" data-pjax-link="overlayMenu">
-                      <div class="menu-overlay__item-wrapper split-text js-split-text" data-split-text-type="lines">Grids</div></a>
-                    <ul class="sub-menu">
-                      <li><a class="h3" href="projects-grid-2-columns.html" data-pjax-link="overlayMenu">
-                          <div class="menu-overlay__item-wrapper split-text js-split-text" data-split-text-type="lines">Grid 2 Columns</div></a>
-                      </li>
-                      <li><a class="h3" href="projects-grid-3-columns.html" data-pjax-link="overlayMenu">
-                          <div class="menu-overlay__item-wrapper split-text js-split-text" data-split-text-type="lines">Grid 3 Columns</div></a>
-                      </li>
-                      <li><a class="h3" href="projects-grid-irregular-1.html" data-pjax-link="overlayMenu">
-                          <div class="menu-overlay__item-wrapper split-text js-split-text" data-split-text-type="lines">Grid Irregular I</div></a>
-                      </li>
-                      <li><a class="h3" href="projects-grid-irregular-2.html" data-pjax-link="overlayMenu">
-                          <div class="menu-overlay__item-wrapper split-text js-split-text" data-split-text-type="lines">Grid Irregular II</div></a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="menu-item-has-children"><a class="h3" href="#" data-pjax-link="overlayMenu">
-                      <div class="menu-overlay__item-wrapper split-text js-split-text" data-split-text-type="lines">Mouse Hover Reveal</div></a>
-                    <ul class="sub-menu">
-                      <li><a class="h3" href="projects-list-reveal-1.html" data-pjax-link="overlayMenu">
-                          <div class="menu-overlay__item-wrapper split-text js-split-text" data-split-text-type="lines">Hover Reveal 1</div></a>
-                      </li>
-                      <li><a class="h3" href="projects-list-reveal-2.html" data-pjax-link="overlayMenu">
-                          <div class="menu-overlay__item-wrapper split-text js-split-text" data-split-text-type="lines">Hover Reveal 2</div></a>
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-              <li class="menu-item-has-children"><a class="h2" href="#" data-pjax-link="overlayMenu">
-                  <div class="menu-overlay__item-wrapper split-text js-split-text" data-split-text-type="lines">Works</div></a>
-                <ul class="sub-menu">
-                  <li class="menu-item-has-children"><a class="h3" href="#" data-pjax-link="overlayMenu">
-                      <div class="menu-overlay__item-wrapper split-text js-split-text" data-split-text-type="lines">Works I - VI</div></a>
-                    <ul class="sub-menu">
-                      <li><a class="h3" href="project-details-1-fullscreen-center.html" data-pjax-link="overlayMenu">
-                          <div class="menu-overlay__item-wrapper split-text js-split-text" data-split-text-type="lines">Nordic Adventure</div></a>
-                      </li>
-                      <li><a class="h3" href="project-details-2-bottom-center.html" data-pjax-link="overlayMenu">
-                          <div class="menu-overlay__item-wrapper split-text js-split-text" data-split-text-type="lines">Sunrise in Desert</div></a>
-                      </li>
-                      <li><a class="h3" href="project-details-3-halfscreen-left-right.html" data-pjax-link="overlayMenu">
-                          <div class="menu-overlay__item-wrapper split-text js-split-text" data-split-text-type="lines">Cassio Apartment</div></a>
-                      </li>
-                      <li><a class="h3" href="project-details-4-halfscreen-left-left.html" data-pjax-link="overlayMenu">
-                          <div class="menu-overlay__item-wrapper split-text js-split-text" data-split-text-type="lines">Nothern Wave</div></a>
-                      </li>
-                      <li><a class="h3" href="project-details-5-bottom-container-center.html" data-pjax-link="overlayMenu">
-                          <div class="menu-overlay__item-wrapper split-text js-split-text" data-split-text-type="lines">On the Edge</div></a>
-                      </li>
-                      <li><a class="h3" href="project-details-6-bottom-fullwidth.html" data-pjax-link="overlayMenu">
-                          <div class="menu-overlay__item-wrapper split-text js-split-text" data-split-text-type="lines">Paysage Fiction</div></a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="menu-item-has-children"><a class="h3" href="#" data-pjax-link="overlayMenu">
-                      <div class="menu-overlay__item-wrapper split-text js-split-text" data-split-text-type="lines">Works VII - XIII</div></a>
-                    <ul class="sub-menu">
-                      <li><a class="h3" href="project-details-7-fullscreen-left.html" data-pjax-link="overlayMenu">
-                          <div class="menu-overlay__item-wrapper split-text js-split-text" data-split-text-type="lines">Silence &amp; Noise</div></a>
-                      </li>
-                      <li><a class="h3" href="project-details-8-halfscreen-right-left.html" data-pjax-link="overlayMenu">
-                          <div class="menu-overlay__item-wrapper split-text js-split-text" data-split-text-type="lines">Minimalex Cosmetics</div></a>
-                      </li>
-                      <li><a class="h3" href="project-details-9-fullscreen-center.html" data-pjax-link="overlayMenu">
-                          <div class="menu-overlay__item-wrapper split-text js-split-text" data-split-text-type="lines">La Isla Bonita</div></a>
-                      </li>
-                      <li><a class="h3" href="project-details-10-halfscreen-left-right.html" data-pjax-link="overlayMenu">
-                          <div class="menu-overlay__item-wrapper split-text js-split-text" data-split-text-type="lines">Kinsey Premium Furniture</div></a>
-                      </li>
-                      <li><a class="h3" href="project-details-11-fullscreen-center.html" data-pjax-link="overlayMenu">
-                          <div class="menu-overlay__item-wrapper split-text js-split-text" data-split-text-type="lines">Dancing in the Dark</div></a>
-                      </li>
-                      <li><a class="h3" href="project-details-12-bottom-container-center.html" data-pjax-link="overlayMenu">
-                          <div class="menu-overlay__item-wrapper split-text js-split-text" data-split-text-type="lines">The Silent Listener</div></a>
-                      </li>
-                      <li><a class="h3" href="project-details-13-bottom-container-center.html" data-pjax-link="overlayMenu">
-                          <div class="menu-overlay__item-wrapper split-text js-split-text" data-split-text-type="lines">Arrigo Casual Accessories</div></a>
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-              <li class="menu-item-has-children"><a class="h2" href="#" data-pjax-link="overlayMenu">
-                  <div class="menu-overlay__item-wrapper split-text js-split-text" data-split-text-type="lines">Projects</div></a>
-                <ul class="sub-menu">
-                  <li><a class="h3" href="Projects-list-reveal.html" data-pjax-link="overlayMenu">
-                      <div class="menu-overlay__item-wrapper split-text js-split-text" data-split-text-type="lines">Mouse Hover Reveal</div></a>
-                  </li>
-                  <li><a class="h3" href="Projects-list-covers.html" data-pjax-link="overlayMenu">
-                      <div class="menu-overlay__item-wrapper split-text js-split-text" data-split-text-type="lines">List Covers</div></a>
-                  </li>
-                  <li><a class="h3" href="Projects-slider-covers.html" data-pjax-link="overlayMenu">
-                      <div class="menu-overlay__item-wrapper split-text js-split-text" data-split-text-type="lines">Slider Covers</div></a>
-                  </li>
-                </ul>
-              </li>
-              <li class="menu-item-has-children"><a class="h2" href="#" data-pjax-link="overlayMenu">
-                  <div class="menu-overlay__item-wrapper split-text js-split-text" data-split-text-type="lines">Blog</div></a>
-                <ul class="sub-menu">
-                  <li class="menu-item-has-children"><a class="h3" href="#" data-pjax-link="overlayMenu">
-                      <div class="menu-overlay__item-wrapper split-text js-split-text" data-split-text-type="lines">Grid Style</div></a>
-                    <ul class="sub-menu">
-                      <li><a class="h3" href="blog-grid-2-columns-sidebar.html" data-pjax-link="overlayMenu">
-                          <div class="menu-overlay__item-wrapper split-text js-split-text" data-split-text-type="lines">Grid 2 Columns Sidebar</div></a>
-                      </li>
-                      <li><a class="h3" href="blog-grid-2-columns.html" data-pjax-link="overlayMenu">
-                          <div class="menu-overlay__item-wrapper split-text js-split-text" data-split-text-type="lines">Grid 2 Columns</div></a>
-                      </li>
-                      <li><a class="h3" href="blog-grid-3-columns.html" data-pjax-link="overlayMenu">
-                          <div class="menu-overlay__item-wrapper split-text js-split-text" data-split-text-type="lines">Grid 3 Columns</div></a>
-                      </li>
-                      <li><a class="h3" href="blog-grid-single-post-1.html" data-pjax-link="overlayMenu">
-                          <div class="menu-overlay__item-wrapper split-text js-split-text" data-split-text-type="lines">Grid Single Post 1</div></a>
-                      </li>
-                      <li><a class="h3" href="blog-grid-single-post-2.html" data-pjax-link="overlayMenu">
-                          <div class="menu-overlay__item-wrapper split-text js-split-text" data-split-text-type="lines">Grid Single Post 2</div></a>
-                      </li>
-                      <li><a class="h3" href="blog-grid-single-post-sidebar.html" data-pjax-link="overlayMenu">
-                          <div class="menu-overlay__item-wrapper split-text js-split-text" data-split-text-type="lines">Grid Single Post Sidebar</div></a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="menu-item-has-children"><a class="h3" href="#" data-pjax-link="overlayMenu">
-                      <div class="menu-overlay__item-wrapper split-text js-split-text" data-split-text-type="lines">List Style</div></a>
-                    <ul class="sub-menu">
-                      <li><a class="h3" href="blog-list-sidebar.html" data-pjax-link="overlayMenu">
-                          <div class="menu-overlay__item-wrapper split-text js-split-text" data-split-text-type="lines">List Sidebar</div></a>
-                      </li>
-                      <li><a class="h3" href="blog-list.html" data-pjax-link="overlayMenu">
-                          <div class="menu-overlay__item-wrapper split-text js-split-text" data-split-text-type="lines">List No Sidebar</div></a>
-                      </li>
-                      <li><a class="h3" href="blog-list-single-post-sidebar.html" data-pjax-link="overlayMenu">
-                          <div class="menu-overlay__item-wrapper split-text js-split-text" data-split-text-type="lines">List Single Post Sidebar</div></a>
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-              <li class="menu-item-has-children"><a class="h2" href="#" data-pjax-link="overlayMenu">
-                  <div class="menu-overlay__item-wrapper split-text js-split-text" data-split-text-type="lines">Pages</div></a>
-                <ul class="sub-menu">
-                  <li class="menu-item-has-children"><a class="h3" href="#" data-pjax-link="overlayMenu">
-                      <div class="menu-overlay__item-wrapper split-text js-split-text" data-split-text-type="lines">Services</div></a>
-                    <ul class="sub-menu">
-                      <li><a class="h3" href="page-inner-services-1.html" data-pjax-link="overlayMenu">
-                          <div class="menu-overlay__item-wrapper split-text js-split-text" data-split-text-type="lines">Services I</div></a>
-                      </li>
-                      <li><a class="h3" href="page-inner-services-2.html" data-pjax-link="overlayMenu">
-                          <div class="menu-overlay__item-wrapper split-text js-split-text" data-split-text-type="lines">Services II</div></a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="menu-item-has-children"><a class="h3" href="#" data-pjax-link="overlayMenu">
-                      <div class="menu-overlay__item-wrapper split-text js-split-text" data-split-text-type="lines">About</div></a>
-                    <ul class="sub-menu">
-                      <li><a class="h3" href="page-inner-about-1.html" data-pjax-link="overlayMenu">
-                          <div class="menu-overlay__item-wrapper split-text js-split-text" data-split-text-type="lines">About I</div></a>
-                      </li>
-                      <li><a class="h3" href="page-inner-about-2.html" data-pjax-link="overlayMenu">
-                          <div class="menu-overlay__item-wrapper split-text js-split-text" data-split-text-type="lines">About II</div></a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="menu-item-has-children"><a class="h3" href="#" data-pjax-link="overlayMenu">
-                      <div class="menu-overlay__item-wrapper split-text js-split-text" data-split-text-type="lines">Contacts</div></a>
-                    <ul class="sub-menu">
-                      <li><a class="h3" href="page-inner-contacts-1.html" data-pjax-link="overlayMenu">
-                          <div class="menu-overlay__item-wrapper split-text js-split-text" data-split-text-type="lines">Contacts I</div></a>
-                      </li>
-                      <li><a class="h3" href="page-inner-contacts-2.html" data-pjax-link="overlayMenu">
-                          <div class="menu-overlay__item-wrapper split-text js-split-text" data-split-text-type="lines">Contacts II</div></a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="menu-item-has-children"><a class="h3" href="#" data-pjax-link="overlayMenu">
-                      <div class="menu-overlay__item-wrapper split-text js-split-text" data-split-text-type="lines">404 Page</div></a>
-                    <ul class="sub-menu">
-                      <li><a class="h3" href="page-inner-404-dark.html" data-pjax-link="overlayMenu">
-                          <div class="menu-overlay__item-wrapper split-text js-split-text" data-split-text-type="lines">404 Page Dark</div></a>
-                      </li>
-                      <li><a class="h3" href="page-inner-404-light.html" data-pjax-link="overlayMenu">
-                          <div class="menu-overlay__item-wrapper split-text js-split-text" data-split-text-type="lines">404 Page Light</div></a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li><a class="h3" href="index.html" data-pjax-link="overlayMenu" target="_blank">
-                      <div class="menu-overlay__item-wrapper split-text js-split-text" data-split-text-type="lines">Demo Page</div></a>
-                  </li>
-                  <li><a class="h3" href="page-inner-services-1-classic-menu.html" data-pjax-link="overlayMenu" target="_blank">
-                      <div class="menu-overlay__item-wrapper split-text js-split-text" data-split-text-type="lines">Classic Menu</div></a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
+
           </div>
-           - fullscreen menu -->
+          <!-- fullscreen menu -->
           <!-- fullscreen widgets -->
           <div class="header__wrapper-overlay-widgets">
             <div class="row">
@@ -486,7 +237,7 @@
             <div class="section-masthead__inner section-fullheight__inner container-fluid">
               <header class="row section-masthead__header justify-content-center">
                 <div class="col">
-                  <div class="section-masthead__subheading small-caps mt-0 mb-1 mb-md-2 split-text js-split-text" data-split-text-type="lines,words" data-split-text-set="words"><span>Farcaster</span></div>
+                  <div class="section-masthead__subheading small-caps mt-0 mb-1 mb-md-2 split-text js-split-text" data-split-text-type="lines,words" data-split-text-set="words"><span>Lens Protocol</span></div>
                   <div class="w-100"></div>
                   <div class="section-masthead__heading split-text js-split-text" data-split-text-type="lines,words" data-split-text-set="words">
                     <h1 class="h1 mt-0 mb-0">Zurf Social</h1>
@@ -539,17 +290,8 @@
               <div class="section-image__wrapper js-transition-img" data-arts-parallax="data-arts-parallax" data-arts-parallax-factor="0.15">
                 <div class="js-transition-img__transformed-el">
                   <div class="js-transition-img__transformed-el">
-                    <!-- Video for modern browsers -->
-                    <video class="of-cover" autoplay loop muted playsinline>
-                      <source src="img/assets/ProjectImages/Vibra/vibra-hero-anim.webm" type="video/webm">
-                      <source src="img/assets/ProjectImages/Vibra/vibra-hero-anim.mp4" type="video/mp4">
-                      <!-- Simple image fallback for browsers that understand <video> but can't play the formats -->
-                      <img src="img/assets/ProjectImages/Vibra/vibra-hero-anim-sm.gif" alt="Vibra animation" class="of-cover">
-                    </video>
-                    <!-- Fallback for very old browsers that don't understand <video> at all -->
-                    <noscript>
-                      <div class="lazy-bg" data-src="img/assets/ProjectImages/Vibra/vibra-hero-anim-sm.gif"></div>
-                    </noscript>
+                    <!-- Image for modern browsers -->
+                    <img src="img/assets/ProjectImages/Zurf/zurf-hero.webp" alt="Zurf animation" class="of-cover" style="width: 100%; height: 100vh; object-fit: cover">
                   </div>
                 </div>
               </div>
@@ -562,13 +304,13 @@
           <div class="container">
             <div class="row justify-content-center">
               <div class="col-lg-8">
-                <section class="section section-content clearfix pt-medium pb-medium text-center" data-arts-os-animation="data-arts-os-animation">
+                <section class="section section-content clearfix pt-small pb-small text-center" data-arts-os-animation="data-arts-os-animation">
                   <div class="section-content__inner">
                     <div class="w-100"></div>
                     <div class="section__headline mb-1 mb-md-2 mx-auto"></div>
                     <div class="w-100"></div>
                     <div class="section-content__heading split-text js-split-text" data-split-text-type="lines,words" data-split-text-set="words">
-                      <h3>Vibra was built for Fascaster to revolutionize the user experience on Farcaster, an open social protocol that was growing monotonous with its Twitter-like feed. We embraced the challenge to turn it vertical and engaging, creating a refreshing, TikTok-inspired scrolling experience that energizes users.</h3>
+                      <h3>Zurf was built for Fascaster to revolutionize the user experience on Farcaster, an open social protocol that was growing monotonous with its Twitter-like feed. We embraced the challenge to turn it vertical and engaging, creating a refreshing, TikTok-inspired scrolling experience that energizes users.</h3>
                     </div>
                   </div>
                 </section>
@@ -580,7 +322,7 @@
           <section class="section section-image section_h-800">
             <div class="section-image__wrapper" data-arts-parallax="data-arts-parallax" data-arts-parallax-factor="0.15">
               <div>
-                <div class="lazy-bg" data-src="img/assets/ProjectImages/Vibra/vibra-cover.webp"></div>
+                <div class="lazy-bg" data-src="img/assets/ProjectImages/Zurf/zurf-cover.webp"></div>
               </div>
             </div>
           </section>
@@ -608,7 +350,7 @@
                 <section class="section section-image section_h-800">
                   <div class="section-image__wrapper" data-arts-parallax="data-arts-parallax" data-arts-parallax-factor="0.15">
                     <div>
-                      <div class="lazy-bg" data-src="img/assets/ProjectImages/Vibra/vibra-gallery-ui-feed.webp"></div>
+                      <div class="lazy-bg" data-src="img/assets/ProjectImages/Zurf/zurf-gallery-ui-feed.webp"></div>
                     </div>
                   </div>
                 </section>
@@ -639,7 +381,7 @@
                 <section class="section section-image section_h-800">
                   <div class="section-image__wrapper" data-arts-parallax="data-arts-parallax" data-arts-parallax-factor="0.15">
                     <div>
-                      <div class="lazy-bg" data-src="img/assets/ProjectImages/Vibra/vibra-gallery-walletviews.webp"></div>
+                      <div class="lazy-bg" data-src="img/assets/ProjectImages/Zurf/zurf-gallery-walletviews.webp"></div>
                     </div>
                   </div>
                 </section>
@@ -684,12 +426,12 @@
           <section class="section section-image section_h-800">
             <div class="section-image__wrapper" data-arts-parallax="data-arts-parallax" data-arts-parallax-factor="0.15">
               <div>
-                <div class="lazy-bg" data-src="img/assets/ProjectImages/Vibra/vibra-figma-ui.webp"></div>
+                <div class="lazy-bg" data-src="img/assets/ProjectImages/Zurf/zurf-mockup-1.webp"></div>
               </div>
             </div>
           </section>
           <!-- - section Parallax IMAGE #2 -->
-          <div class="container section pt-medium pb-medium">
+          <div class="container section pt-small pb-small">
             <div class="row">
               <div class="col">
                 <section class="section section-content clearfix text-center" data-arts-os-animation="data-arts-os-animation">
@@ -794,13 +536,28 @@
             </div>
           </div>
           <!-- - section CONTENT #2 -->
+          <!-- section CALL TO ACTION -->
+          <section class="section section-content section-cta bg-dark-3" data-arts-theme-text="light">
+            <div class="container-fluid pt-small pb-small">
+              <div class="row justify-content-center text-center">
+                <div class="col-lg-8">
+                  <h3 class="h3 mt-0 mb-0">Let's work together!</h3>
+                  <p class="mb-2">Take a professional Product Designer to your side.</p>
+                  <a class="button button_solid button_dark" href="page-inner-contacts-1.html" data-pjax-link="overlayMenu">
+                    <span class="button__label-hover">Get in Touch</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- - section CALL TO ACTION -->
           <!-- section NAV PROJECTS -->
           <section class="container-fluid section section-nav-projects section-fullheight text-center" data-arts-os-animation="data-arts-os-animation">
             <div class="section-fullheight__inner section-nav-projects__inner_actual">
               <div class="section__divider section__divider_top"></div>
-              <header class="section-nav-projects__header"><a class="section-nav-projects__link" href="project-details-8-halfscreen-right-left.html" data-pjax-link="flyingImage">
+              <header class="section-nav-projects__header"><a class="section-nav-projects__link" href="#" data-pjax-link="flyingImage">
                   <div class="section-nav-projects__subheading small-caps mb-1 mb-md-2">Next Project</div>
-                  <h2 class="section-nav-projects__heading h1 mt-0 mb-0">Minimalex Cosmetics</h2></a></header>
+                  <h2 class="section-nav-projects__heading h1 mt-0 mb-0">#</h2></a></header>
               <div class="section-nav-projects__wrapper-scroll-down text-center">
                 <div class="circle-button js-circle-button">
                   <!-- curved label -->
@@ -842,8 +599,8 @@
               </div>
             </div>
             <div class="container section-nav-projects__next-image section-fullheight__inner">
-              <div class="section-nav-projects__wrapper-image js-transition-img overflow" style="border-radius: 100%; overflow: hidden;">
-                <div class="lazy js-transition-img__transformed-el" style="border-radius: 100%; overflow: hidden;"><img class="of-cover" src="" data-src="" alt="Next Project Preview" width="640" height="640"/></div>
+              <div class="section-nav-projects__wrapper-image js-transition-img overflow" style="border-radius: 50%; overflow: hidden;">
+                <div class="lazy js-transition-img__transformed-el" style="border-radius: 0%; overflow: hidden;"><img class="of-cover" src="#" data-src="#" alt="Next Project Preview" width="640" height="640"/></div>
               </div>
             </div>
             <div class="section-fullheight__inner hidden"></div>
@@ -1033,7 +790,8 @@
     <script src="js/components.js"></script>
     <!-- - COMPONENTS -->
     <script src="https://maps.googleapis.com/maps/api/js?callback=Function.prototype&amp;key=AIzaSyBwR_TrF6h7-pMxkKv_q2t8BXX3w6QuFOc" async></script>
-
+    <!-- Auto Project Navigation -->
+    <script src="js/sectionNavProjects/AutoProjectNavigation.js"></script>
     <!-- openGmail in mobile -->
     <script>
     function openGmail(email) {
@@ -1052,8 +810,5 @@
       }
     }
     </script>
-
-    <!-- Auto Project Navigation -->
-    <script src="js/sectionNavProjects/AutoProjectNavigation.js"></script>
   </body>
 </html>
