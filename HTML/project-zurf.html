@@ -309,7 +309,7 @@
                     <div class="w-100"></div>
                     <div class="section__headline mb-1 mb-md-2 mx-auto"></div>
                     <div class="w-100"></div>
-                    <div class="section-content__heading split-text js-split-text" data-split-text-type="lines,words" data-split-text-set="words">
+                    <div class="section-content__heading split-text js-split-text" data-split-text-type="lines" data-split-text-set="lines">
                       <h3>Zurf was built for Fascaster to revolutionize the user experience on Farcaster, an open social protocol that was growing monotonous with its Twitter-like feed. We embraced the challenge to turn it vertical and engaging, creating a refreshing, TikTok-inspired scrolling experience that energizes users.</h3>
                     </div>
                   </div>
@@ -346,12 +346,20 @@
                   </div>
                 </section>
               </div>
-              <div class="col-lg-6 order-lg-1 bg-white">
-                <section class="section section-image section_h-800">
-                  <div class="section-image__wrapper" data-arts-parallax="data-arts-parallax" data-arts-parallax-factor="0.15">
-                    <div>
-                      <div class="lazy-bg" data-src="img/assets/ProjectImages/Zurf/zurf-gallery-ui-feed.webp"></div>
-                    </div>
+              <div class="col-lg-6">
+                <section class="section-video__container section_h-800">
+                  <div class="w-100 h-100 p-small d-flex align-items-center justify-content-center">
+                    <!-- Video for modern browsers -->
+                    <video autoplay loop muted playsinline style="max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; display: block; border-radius: 1rem; overflow: hidden; box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);">
+                      <source src="img/assets/ProjectImages/Zurf/zurf-walletdemo.webm" type="video/webm">
+                      <source src="img/assets/ProjectImages/Zurf/zurf-walletdemo.mp4" type="video/mp4">
+                      <!-- Simple image fallback for browsers that understand <video> but can't play the formats -->
+                      <img src="img/assets/ProjectImages/Zurf/zurf-walletdemo.gif" alt="Zurf animation" style="max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; display: block;">
+                    </video>
+                    <!-- Fallback for very old browsers that don't understand <video> at all -->
+                    <noscript>
+                      <div class="lazy-bg" style="padding: 20%; /* Maintain aspect ratio for fallback */ width: 100%; height: 0; background-size: contain; background-repeat: no-repeat; background-position: center;" data-src="img/assets/ProjectImages/Zurf/zurf-walletdemo.gif"></div>
+                    </noscript>
                   </div>
                 </section>
               </div>
@@ -381,7 +389,7 @@
                 <section class="section section-image section_h-800">
                   <div class="section-image__wrapper" data-arts-parallax="data-arts-parallax" data-arts-parallax-factor="0.15">
                     <div>
-                      <div class="lazy-bg" data-src="img/assets/ProjectImages/Zurf/zurf-gallery-walletviews.webp"></div>
+                      <div class="lazy-bg" data-src="img/assets/ProjectImages/Zurf/#.webp"></div>
                     </div>
                   </div>
                 </section>

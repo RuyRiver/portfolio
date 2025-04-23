@@ -5226,7 +5226,7 @@ body.elementor-editor-active [data-arts-os-animation] {
 }
 
 .section-content__text {
-    max-width: 700px
+    max-width: fill-available
 }
 
 .text-left .section-content__text {
