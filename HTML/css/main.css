@@ -7533,7 +7533,7 @@ small,
 }
 
 .split-text:not(.js-split-text) .has-drop-cap>div:first-child {
-    display: inline-block !important;
+    display: block !important;
     float: left
 }
 
