@@ -21,9 +21,8 @@ A modern, dynamic personal portfolio website for Ruy River, built with HTML5, SA
   - HTML5
   - SASS (compiled to CSS3)
   - JavaScript (ES6+)
-  - jQuery
   - GSAP (GreenSock Animation Platform)
-  
+
 - **Build Tools:**
   - Node.js
   - npm
