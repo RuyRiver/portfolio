@@ -509,13 +509,13 @@
                               </div>
                               <!-- - Project photos --></a></div>
                           <div class="swiper-slide" data-category="Projects"><a class="d-inline-block js-page-indicator-trigger js-Project" href="project-clpd.html">
-                              <h2 class="h1 slider__heading block-counter js-split-text" data-split-text-type="lines, words, chars" data-split-text-set="chars"><span>CLPD</span><span class="block-counter__counter">Based LATAM</span></h2>
+                              <h2 class="h1 slider__heading block-counter js-split-text" data-split-text-type="lines, words, chars" data-split-text-set="chars"><span>CLPD</span><span class="block-counter__counter">BASE LATAM</span></h2>
                               <!-- Project photos -->
                               <div class="js-Project__items d-none"><img src="#" data-Project-src="img/assets/ProjectImages/Project-3_1.jpg" width="1920" height="1280" data-title="" alt=""/><img src="#" data-Project-src="img/assets/ProjectImages/Project-3_2.jpg" width="1920" height="1920" data-title="" alt=""/><img src="#" data-Project-src="img/assets/ProjectImages/Project-3_3.jpg" width="1280" height="1920" data-title="" alt=""/><img src="#" data-Project-src="img/assets/ProjectImages/Project-3_4.jpg" width="1280" height="1920" data-title="" alt=""/><img src="#" data-Project-src="img/assets/ProjectImages/Project-3_5.jpg" width="1920" height="1280" data-title="" alt=""/><img src="#" data-Project-src="img/assets/ProjectImages/Project-3_6.jpg" width="1280" height="1920" data-title="" alt=""/><img src="#" data-Project-src="img/assets/ProjectImages/Project-3_7.jpg" width="1920" height="1280" data-title="" alt=""/>
                               </div>
                               <!-- - Project photos --></a></div>
-                          <div class="swiper-slide" data-category="Projects"><a class="d-inline-block js-page-indicator-trigger js-Project" href="#">
-                              <h2 class="h1 slider__heading block-counter js-split-text" data-split-text-type="lines, words, chars" data-split-text-set="chars"><span>UI / UX Design</span><span class="block-counter__counter">31</span></h2>
+                          <div class="swiper-slide" data-category="Projects"><a class="d-inline-block js-page-indicator-trigger js-Project" href="project-wav3s.html">
+                              <h2 class="h1 slider__heading block-counter js-split-text" data-split-text-type="lines, words, chars" data-split-text-set="chars"><span>Wav3s</span><span class="block-counter__counter">Social-Fi</span></h2>
                               <!-- Project photos -->
                               <div class="js-Project__items d-none"><img src="#" data-Project-src="img/assets/ProjectImages/Project-4_1.jpg" width="1920" height="1280" data-title="" alt=""/><img src="#" data-Project-src="img/assets/ProjectImages/Project-4_2.jpg" width="1920" height="1920" data-title="" alt=""/><img src="#" data-Project-src="img/assets/ProjectImages/Project-4_3.jpg" width="1920" height="1920" data-title="" alt=""/><img src="#" data-Project-src="img/assets/ProjectImages/Project-4_4.jpg" width="1920" height="1920" data-title="" alt=""/>
                               </div>
@@ -563,9 +563,15 @@
                           <div class="slider__zoom-container w-100 h-100 overflow">
                             <a href="project-vibra.html" data-pjax-link="data-pjax-link" class="w-100 h-100 d-block" draggable="false">
                               <video class="slider__bg swiper-lazy js-transition-img__transformed-el" autoplay loop muted playsinline draggable="false">
-                                <source src="img/assets/Projects/Project-Vibra_thumb.webm" type="video/webm">
-                                <source src="img/assets/Projects/Project-Vibra_thumb.mp4" type="video/mp4">
+                                <source src="img/assets/Projects/Project-Vibra_thumb.webm" alt="Vibra Icon" type="video/webm">
+                                <source src="img/assets/Projects/Project-Vibra_thumb.mp4" alt="Vibra Icon" type="video/mp4">
+                                <!-- Simple image fallback for browsers that understand <video> but can't play the formats -->
+                                <img src="img/assets/Projects/Project-Vibra_thumb.gif" alt="Vibra Icon" style="max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; display: block;">
                               </video>
+                              <!-- Fallback for very old browsers that don't understand <video> at all -->
+                              <noscript>
+                                <div class="lazy-bg" style="padding: 20%; /* Maintain aspect ratio for fallback */ width: 100%; height: 0; background-size: contain; background-repeat: no-repeat; background-position: center;" data-src="img/assets/ProjectImages/Zurf/zurf-walletdemo.gif"></div>
+                              </noscript>
                             </a>
                           </div>
                           <!-- - zoom on drag container -->
@@ -603,8 +609,19 @@
                         <div class="w-100 h-100" data-swiper-parallax-zoom="50%" data-swiper-parallax="10%">
                           <!-- zoom on drag container -->
                           <div class="slider__zoom-container w-100 h-100 overflow">
-                            <div class="slider__bg swiper-lazy lazy-bg js-transition-img__transformed-el" data-background="img/assets/Projects/Project-4_thumb.jpg"></div>
-                          </div>
+                            <a href="project-wav3s.html" data-pjax-link="data-pjax-link" class="w-100 h-100 d-block" draggable="false">
+                              <video class="slider__bg swiper-lazy js-transition-img__transformed-el" autoplay loop muted playsinline draggable="false">
+                                <source src="img/assets/Projects/Project-Wav3s_thumb.webm" alt="Wav3s Icon" type="video/webm">
+                                <source src="img/assets/Projects/Project-Wav3s_thumb.mp4" alt="Wav3s Icon" type="video/mp4">
+                                <!-- Simple image fallback for browsers that understand <video> but can't play the formats -->
+                                <img src="img/assets/Projects/Project-Wav3s_thumb.gif" alt="Wav3s Icon" style="max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; display: block;">
+                              </video>
+                              <!-- Fallback for very old browsers that don't understand <video> at all -->
+                              <noscript>
+                                <div class="lazy-bg" style="padding: 20%; /* Maintain aspect ratio for fallback */ width: 100%; height: 0; background-size: contain; background-repeat: no-repeat; background-position: center;" data-src="img/assets/ProjectImages/Zurf/zurf-walletdemo.gif"></div>
+                              </noscript>
+                            </a>
+                            </div>
                           <!-- - zoom on drag container -->
                         </div>
                       </div>
