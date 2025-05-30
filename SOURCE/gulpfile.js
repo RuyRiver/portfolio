@@ -184,6 +184,13 @@ export { vendorCSS, vendorJS, componentsCSS, componentsJS, browserSyncCreate, wa
 export const parallelTasks = parallel(vendorCSS, vendorJS, componentsCSS, componentsJS);
 // Export the clearCache task
 export const clean = clearCache;
+
+// Add the new build task
+export const build = series(
+  clearCache, // Optional: clear cache before building
+  parallel(vendorCSS, vendorJS, componentsCSS, componentsJS)
+);
+
 // Default task remains the same
 export default series(
   parallel(vendorCSS, vendorJS, componentsCSS, componentsJS),
