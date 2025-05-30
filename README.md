@@ -13,6 +13,7 @@ A modern, dynamic personal portfolio website for Ruy River, built with HTML5, SA
 - **Project Showcases:** Dedicated sections to display individual projects.
 - **Custom Cursor Effects:** Unique cursor interactions.
 - **Smooth Scrolling & Parallax:** Enhanced visual experience during navigation.
+- **WebGL Powered Effects:** Utilizes WebGL (via Three.js) for advanced graphical effects like interactive shaders for list hover and slider transitions, enhancing visual engagement.
 - *(Potential)* Contact Form: Includes `mail.php`, suggesting a PHP backend for form submissions (verify server setup).
 
 ## Technologies Used
@@ -21,7 +22,9 @@ A modern, dynamic personal portfolio website for Ruy River, built with HTML5, SA
   - HTML5
   - SASS (compiled to CSS3)
   - JavaScript (ES6+)
+  - Barba.js (for PJAX transitions)
   - GSAP (GreenSock Animation Platform)
+  - Three.js (for WebGL effects)
 
 - **Build Tools:**
   - Node.js
