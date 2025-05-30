@@ -3131,7 +3131,7 @@ div.wpcf7-acceptance-missing {
     top: 0;
     left: 0;
     width: 100vw;
-    height: 100vh;
+    height: 100dvh;
     z-index: 500;
     background: none !important;
     background-color: unset !important;
@@ -3171,7 +3171,7 @@ div.wpcf7-acceptance-missing {
     top: 0;
     left: 0;
     width: 100vw;
-    height: 100vh;
+    height: 100dvh;
     transform: translateY(100%);
     margin: auto;
     z-index: 100;
@@ -3686,7 +3686,7 @@ div.wpcf7-acceptance-missing {
     top: 0;
     left: 0;
     width: 100vw !important;
-    height: 100vh !important;
+    height: 100dvh !important;
     pointer-events: none
 }
 
@@ -4081,7 +4081,7 @@ div.wpcf7-acceptance-missing {
 }
 
 .modal-dialog-scrollable .modal-content {
-    max-height: calc(100vh - 1rem);
+    max-height: calc(100dvh - 1rem);
     overflow: hidden
 }
 
@@ -4102,7 +4102,7 @@ div.wpcf7-acceptance-missing {
 
 .modal-dialog-centered::before {
     display: block;
-    height: calc(100vh - 1rem);
+    height: calc(100dvh - 1rem);
     content: ""
 }
 
@@ -4139,7 +4139,7 @@ div.wpcf7-acceptance-missing {
     left: 0;
     z-index: 1040;
     width: 100vw;
-    height: 100vh;
+    height: 100dvh;
     background-color: #000
 }
 
@@ -4214,7 +4214,7 @@ div.wpcf7-acceptance-missing {
     }
 
     .modal-dialog-scrollable .modal-content {
-        max-height: calc(100vh - 3.5rem)
+        max-height: calc(100dvh - 3.5rem)
     }
 
     .modal-dialog-centered {
@@ -4222,7 +4222,7 @@ div.wpcf7-acceptance-missing {
     }
 
     .modal-dialog-centered::before {
-        height: calc(100vh - 3.5rem)
+        height: calc(100dvh - 3.5rem)
     }
 
     .modal-sm {
@@ -4655,7 +4655,7 @@ div.wpcf7-acceptance-missing {
     top: 0;
     left: 0;
     width: 100vw;
-    height: 100vh;
+    height: 100dvh;
     z-index: 99;
     background-color: #fff;
     overflow: hidden
@@ -4669,8 +4669,8 @@ div.wpcf7-acceptance-missing {
     transform: translate(-50%, -50%);
     width: calc(1*var(--preloader-circle-min-size)*1px);
     height: calc(1*var(--preloader-circle-min-size)*1px);
-    max-width: calc(100vh - var(--gutter-vertical)*3);
-    max-height: calc(100vh - var(--gutter-vertical)*3);
+    max-width: calc(100dvh - var(--gutter-vertical)*3);
+    max-height: calc(100dvh - var(--gutter-vertical)*3);
     border-radius: 100%;
     z-index: 1;
     pointer-events: none
@@ -4714,7 +4714,7 @@ div.wpcf7-acceptance-missing {
     padding: 30px;
     width: calc(1*var(--preloader-circle-min-size)*1px);
     height: calc(1*var(--preloader-circle-min-size)*1px);
-    max-height: calc(100vh - var(--gutter-vertical)*3)
+    max-height: calc(100dvh - var(--gutter-vertical)*3)
 }
 
 @media screen and (min-width: 320px) {
@@ -4773,7 +4773,7 @@ div.wpcf7-acceptance-missing {
     top: 0;
     left: 0;
     width: 100vw;
-    height: 100vh;
+    height: 100dvh;
     display: flex;
     align-items: center;
     justify-content: center
@@ -4874,7 +4874,7 @@ div.wpcf7-acceptance-missing {
 .smooth-scroll {
     overflow: hidden;
     width: 100vw;
-    height: 100vh
+    height: 100dvh
 }
 
 [data-arts-os-animation]:not([data-arts-os-animation=animated]) {
@@ -4916,7 +4916,7 @@ body.elementor-editor-active [data-arts-os-animation] {
     justify-content: top;
     padding-top: 20%;
     width: 100%;
-    min-height: 100vh
+    min-height: 100dvh
 }
 
 .section-fullheight__inner_mobile {
@@ -4970,51 +4970,51 @@ body.elementor-editor-active [data-arts-os-animation] {
 
 .section_h-100 {
     height: 100px;
-    max-height: 100vh
+    max-height: 100dvh
 }
 
 .section_h-200 {
     height: 200px;
-    max-height: 100vh
+    max-height: 100dvh
 }
 
 .section_h-300 {
     height: 300px;
-    max-height: 100vh
+    max-height: 100dvh
 }
 
 .section_h-400 {
     height: 400px;
-    max-height: 100vh
+    max-height: 100dvh
 }
 
 .section_h-500 {
     height: 500px;
-    max-height: 100vh
+    max-height: 100dvh
 }
 
 .section_h-600 {
     height: 600px;
-    max-height: 100vh
+    max-height: 100dvh
 }
 
 .section_h-700 {
     height: 700px;
-    max-height: 100vh
+    max-height: 100dvh
 }
 
 .section_h-800 {
     height: 800px;
-    max-height: 100vh
+    max-height: 100dvh
 }
 
 .section_h-900 {
     height: 900px;
-    max-height: 100vh
+    max-height: 100dvh
 }
 
-.section_h-100vh {
-    height: 100vh
+.section_h-100dvh {
+    height: 100dvh
 }
 
 .section_w-container-right {
@@ -5067,39 +5067,39 @@ body.elementor-editor-active [data-arts-os-animation] {
 
 @media screen and (max-width: 767px) {
     .section_h-100 {
-        max-height: 70vh
+        max-height: 70dvh
     }
 
     .section_h-200 {
-        max-height: 70vh
+        max-height: 70dvh
     }
 
     .section_h-300 {
-        max-height: 70vh
+        max-height: 70dvh
     }
 
     .section_h-400 {
-        max-height: 70vh
+        max-height: 70dvh
     }
 
     .section_h-500 {
-        max-height: 70vh
+        max-height: 70dvh
     }
 
     .section_h-600 {
-        max-height: 70vh
+        max-height: 70dvh
     }
 
     .section_h-700 {
-        max-height: 70vh
+        max-height: 70dvh
     }
 
     .section_h-800 {
-        max-height: 70vh
+        max-height: 70dvh
     }
 
     .section_h-900 {
-        max-height: 70vh
+        max-height: 70dvh
     }
 }
 
@@ -5373,7 +5373,7 @@ body.elementor-editor-active [data-arts-os-animation] {
 
     .section-demo__bg {
         position: relative;
-        min-height: 70vh;
+        min-height: 70dvh;
         max-width: 100%;
         background-color: rgba(0, 0, 0, 0) !important
     }
@@ -5643,7 +5643,7 @@ body.elementor-editor-active [data-arts-os-animation] {
         left: auto;
         right: auto;
         bottom: auto;
-        height: 100vh;
+        height: 100dvh;
         transform: none
     }
 
@@ -5708,7 +5708,7 @@ body.elementor-editor-active [data-arts-os-animation] {
 }
 
 .section-nav-projects__inner_actual {
-    height: 100vh;
+    height: 100dvh;
     overflow: hidden
 }
 
@@ -6121,8 +6121,8 @@ select {
 }
 
 .slider__images-slide-inner_circle {
-    width: calc(100vh - var(--gutter-horizontal)*2.5);
-    height: calc(100vh - var(--gutter-horizontal)*2.5);
+    width: calc(100dvh - var(--gutter-horizontal)*2.5);
+    height: calc(100dvh - var(--gutter-horizontal)*2.5);
     max-width: 33vw;
     max-height: 33vw;
     overflow: hidden;
@@ -6603,7 +6603,7 @@ select {
     }
 
     .slider-halfscreen-projects__images {
-        height: 100vh
+        height: 100dvh
     }
 
     .slider-halfscreen-projects__content {
@@ -7027,7 +7027,7 @@ select {
     top: 0;
     left: 0;
     width: 100vw;
-    height: 100vh;
+    height: 100dvh;
     transform: translateY(100%);
     margin: auto;
     z-index: 100;
@@ -11800,8 +11800,8 @@ small,
     width: 100% !important
 }
 
-.w-100vh {
-    width: 100vh !important
+.w-100dvh {
+    width: 100dvh !important
 }
 
 .w-100vw {
@@ -11812,8 +11812,8 @@ small,
     height: 100% !important
 }
 
-.h-100vh {
-    height: 100vh !important
+.h-100dvh {
+    height: 100dvh !important
 }
 
 .h-100vw {
