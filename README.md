@@ -1,6 +1,6 @@
-# Ruy's Portfolio
+# Rodrigo Rivas Portfolio
 
-A modern, dynamic personal portfolio website for Ruy River, built with HTML5, SASS, and JavaScript, utilizing Gulp for the build process. It features AJAX-powered navigation, smooth transitions, and interactive components to showcase Ruy's skills and experience.
+A modern, dynamic personal portfolio website for Rodrigo Rivas, built with HTML5, SASS, and JavaScript, utilizing Gulp for the build process. It features AJAX-powered navigation, smooth transitions, and interactive components to showcase Rodrigo's skills and experience.
 
 ## Features
 
